@@ -1,2 +1,2 @@
 #!/bin/bash
-chown vincent:staff _hello | ls -l _hello | awk '{print $3, $4}'
+chown vincent:staff _hello || echo "chown failed"; ls -l _hello | awk '{print $3, $4}'
